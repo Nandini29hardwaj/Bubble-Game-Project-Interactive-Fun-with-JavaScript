@@ -61,7 +61,7 @@ function endGame() {
 
 // restart game
 function restartGame() {
-  timer = 5;
+  timer = 60;
   score = 0;
   document.querySelector("#timer-val").textContent = timer;
   document.querySelector("#score-val").textContent = score;
