@@ -1,0 +1,171 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family:'Times New Roman', Times, serif;
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+#main{
+  width:100%;
+  height:100%;
+  background-color: rgb(151, 175, 167);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+            /* panel */
+#panel{
+  overflow: hidden;
+  width:80%;
+  height:80%;
+  border-radius: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+#p-top{
+  flex: 0 0 100px;
+  padding: 0px 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color:white;
+  width:100%;
+  background-color: rgb(67, 92, 78);
+}
+.elem{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.elem h4{
+  font-weight: 500;
+  font-size: 22px;
+}
+.box{
+  color: rgb(141, 195, 156);
+  font-weight: 600;
+  font-size: 22px;
+  padding:10px 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+          /* panel bottom */
+#p-bottom{
+  width: 100%;
+  flex: 1;
+  padding:20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  justify-content: center;
+}
+.bubble{
+  width:60px;
+  height:60px;
+  font-weight: 500;
+  color:rgb(243, 233, 233);
+  background-color: rgb(67, 92, 78);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
+} 
+.bubble:hover{
+  cursor: pointer;
+  background-color: rgb(48, 72, 58);;
+}
+
+
+
+/* game over */
+/* Styling for Game Over message */
+#p-bottom h1 {
+  font-size: 3rem;
+  color: rgb(67, 92, 78); /* A dark green for visibility */
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-top: 200px;
+}
+
+/* Styling for the score display */
+#p-bottom p {
+  font-size: 1.5rem;
+  color: rgb(141, 195, 156); /* A lighter green to contrast */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 220px;
+}
+
+/* Styling for the restart button */
+#restart-btn {
+  width:130px;
+  height:60px;
+  padding: 8px 16px;  /* Adjust padding to size button appropriately */
+  font-size: 1.2rem;   /* Adjust font size */
+  color: white;
+  background-color: rgb(67, 92, 78); /* Dark green */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 250px;  /* Optional: limits width */
+  margin-top: 200px;
+}
+
+/* Hover effect for restart button */
+#restart-btn:hover {
+  background-color: rgb(85, 115, 96); /* Slightly lighter green */
+}
+
+
+/* Flash effect for wrong click */
+#p-bottom.flash {
+  animation: flash-bg 0.2s ease-in-out;
+}
+@keyframes flash-bg {
+  0% {
+    background-color: rgba(255, 0, 0, 0.5); /* Red flash */
+  }
+  100% {
+    background-color: rgb(151, 175, 167); /* Original background */
+  }
+}
+/* Error message styling */
+#error-message {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 0, 0, 0.8); /* Red background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: none; /* Initially hidden */
+  z-index: 10;
+}
+
+/* Blink effect on game over */
+#main.blink {
+  animation: full-flash 0.5s ease-in-out;
+}
+
+@keyframes full-flash {
+  0%, 100% {
+    background-color: rgb(151, 175, 167); /* Original background color */
+  }
+  50% {
+    background-color: rgb(255, 0, 0); /* Intense red flash */
+  }
+}
+
