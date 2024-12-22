@@ -47,7 +47,9 @@ function endGame() {
   main.classList.add("blink");
   setTimeout(() => {
     main.classList.remove("blink");
-
+    
+   hitRn = 0;
+   document.querySelector("#hit-val").textContent = hitRn;
   // Display the game over message and restart button
   document.querySelector("#p-bottom").innerHTML = `
     <h1>Game Over</h1>
